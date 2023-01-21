@@ -1,3 +1,3 @@
 <x-app-layout>
-    <h1>test</h1>
+    <h1 class="text-9xl">test</h1>
 </x-app-layout>

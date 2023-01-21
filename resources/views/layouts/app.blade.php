@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,9 @@
 
 
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+
     <!-- Styles -->
     @vite('resources/css/app.css')
 
@@ -21,7 +24,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
-<body class="">
+<body class="bg-gradient-to-tr from-sky-400 to-blue-800 bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven">
     <x-nav/>
     {{$slot}}
 </body>
