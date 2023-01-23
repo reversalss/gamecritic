@@ -25,7 +25,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
-<body class="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-400 to-blue-800 bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven">
+<body class="bg-gradient-to-b from-gray-700 via-gray-900 to-black bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven">
     <x-nav/>
     {{$slot}}
 </body>
