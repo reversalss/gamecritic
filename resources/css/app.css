@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .font-maven {
     font-family: 'Maven Pro', sans-serif;
 }
@@ -19,5 +21,9 @@
 }
 
 .bg-black-50 {
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.bg-black-75 {
+    background-color: rgb(0, 0, 0, 0.75);
 }

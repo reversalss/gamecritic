@@ -10,13 +10,10 @@
 
     <title>{{$title}}{{config('app.name')}}</title>
 
-
-
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
-
+    
     <!-- Styles -->
     @vite('resources/css/app.css')
 
@@ -25,7 +22,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
-<body class="bg-gradient-to-b from-gray-700 via-gray-900 to-black bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven">
+<body class="bg-gradient-to-b from-yellow-500 to-black bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven text-white text-xl">
     <x-nav/>
     {{$slot}}
 </body>
