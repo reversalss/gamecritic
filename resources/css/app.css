@@ -5,3 +5,19 @@
 .font-maven {
     font-family: 'Maven Pro', sans-serif;
 }
+
+.font-logo {
+    font-family: 'Jockey One', sans-serif;
+}
+
+.primaryb {
+    background-color:rgb(10, 38, 71)
+}
+
+.primaryf {
+    color:rgb(10, 38, 71)
+}
+
+.bg-black-50 {
+    background-color: rgb(0, 0, 0, 0.3);
+}

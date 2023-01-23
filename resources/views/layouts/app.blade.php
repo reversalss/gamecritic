@@ -15,6 +15,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     @vite('resources/css/app.css')
@@ -24,7 +25,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
-<body class="bg-gradient-to-tr from-sky-400 to-blue-800 bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven">
+<body class="bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-sky-400 to-blue-800 bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven">
     <x-nav/>
     {{$slot}}
 </body>
