@@ -13,6 +13,10 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/33e081594a.js" crossorigin="anonymous"></script>
+
     
     <!-- Styles -->
     @vite('resources/css/app.css')

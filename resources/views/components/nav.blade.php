@@ -12,11 +12,11 @@
     <nav class="nav font-maven text-xl text-white font-maven">
         <ul class="flex items-center">
             <li class="p-4 border-b-2 border-yellow-400 border-opacity-0 hover:border-opacity-100 hover:textyellow-400 duration-200 cursor-pointer-active">
-                <img src="{{url('images/login.png')}}" alt="login icon" class="h-8 float-left">
+                <i class="fa-solid fa-user"></i>
                 <a href="/login" class="px-1">Login</a>
             </li>
             <li class="p-4 border-b-2 border-yellow-400 border-opacity-0 hover:border-opacity-100 hover:textyellow-400 duration-200 cursor-pointer-active">
-                <img src="{{url('images/cogwheel.png')}}" alt="settings icon" class="h-8 float-left">
+                <i class="fa-solid fa-gear"></i>
                 <a href="/settings" class="px-1">settings</a>
             </li>
         </ul>
