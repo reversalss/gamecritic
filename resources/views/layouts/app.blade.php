@@ -22,7 +22,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 </head>
-<body class="bg-gradient-to-b from-yellow-500 to-black bg-no-repeat bg-cover m-0 p-0 w-full h-full font-maven text-white text-xl">
+<body class="bg-slate-900 m-0 p-0 w-full h-full font-maven text-white text-xl">
     <x-nav/>
     {{$slot}}
 </body>

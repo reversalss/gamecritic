@@ -1,8 +1,12 @@
-<header class="header sticky top-0 bg-black shadow-md flex items-center justify-between px-8 py-5" id="navbar">
+<header class="header sticky top-0 bg-slate-800 shadow-md flex items-center justify-between px-8 py-5" id="navbar">
     <!-- Logo -->
     <h1 class="w-3/12 font-logo text-4xl text-white">
         <a href="/"><span class="text-yellow-400">GAME</span>critic</a>
     </h1>
+
+    <!-- Search bar -->
+
+    <input type="text" placeholder="Search..." class="text-black font-maven font-bold m-auto">
 
     <!-- Nav bar -->
     <nav class="nav font-maven text-xl text-white font-maven">
