@@ -16,7 +16,7 @@ class userController extends Controller
 
             'username' => ['required', 'unique:users,username', 'min:3', 'max:15'],
             'email' => ['required', 'unique:users,email', 'email'],
-            'password' => ['required', 'min:6']
+            'password' => ['required', 'min:6', 'confirmed']
 
         ]);
 
@@ -27,5 +27,8 @@ class userController extends Controller
             'password' => Hash::make($request->get('password'))
 
         ]);
+
+        return redirect('/login');
+        
     }
 }
