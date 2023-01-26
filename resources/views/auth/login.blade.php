@@ -7,10 +7,10 @@
         <div>
             <form class="text-center py-12" method="GET" action="loggingin">
                 <div>
-                    <input type="text" placeholder="Email" class="text-white font-bold rounded-md bg-black-50 py-3 px-5 placeholder:pl-3 border-0 focus:ring-yellow-400" name="email">
+                    <input type="email" placeholder="Email" class="text-white font-bold rounded-md bg-black-50 py-3 px-5 placeholder:pl-3 border-0 focus:ring-yellow-400" name="email">
                 </div>
                 <div class="pt-5">
-                    <input type="text" placeholder="Password" class="text-white font-bold rounded-md bg-black-50 py-3 px-5 placeholder:pl-3 border-0 focus:ring-yellow-400" name="password">
+                    <input type="password" placeholder="Password" class="text-white font-bold rounded-md bg-black-50 py-3 px-5 placeholder:pl-3 border-0 focus:ring-yellow-400" name="password">
                 </div>
                 <div class="pt-7 flex flex-row pl-20">
                     <input type="checkbox" name="remember" class="w-5 h-5 text-yellow-400 bg-slate-900 border-slate-700 rounded focus:ring-1 focus:ring-yellow-400">
@@ -19,6 +19,15 @@
                 <div class="pt-7">
                     <button type="submit" value="info" class="bg-black-50 hover:bg-yellow-400 hover:text-black transition-all duration-75 py-3 px-9 rounded-md font-bold">Login</button>
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="py-5">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
         </div>
       </div>

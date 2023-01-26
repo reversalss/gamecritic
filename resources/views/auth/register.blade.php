@@ -10,17 +10,26 @@
                     <input type="text" placeholder="Username" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="username">
                 </div>
                 <div class="pt-5">
-                    <input type="text" placeholder="Email" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="email">
+                    <input type="email" placeholder="Email" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="email">
                 </div>
                 <div class="pt-5">
-                    <input type="text" placeholder="Password" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="password">
+                    <input type="password" placeholder="Password" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="password">
                 </div>
                 <div class="pt-5">
-                    <input type="text" placeholder="Confirm Password" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="password_confirmation">
+                    <input type="password" placeholder="Confirm Password" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="password_confirmation">
                 </div>
                 <div class="pt-10">
                     <button type="submit" value="info" class="bg-black-50 hover:bg-yellow-400 hover:text-black transition-all duration-75 py-3 px-9 rounded-md font-bold">Register</button>
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="py-5">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </form>
         </div>
       </div>
