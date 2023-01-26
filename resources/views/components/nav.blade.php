@@ -6,7 +6,7 @@
     <!-- Search bar -->
     <form action="/search" method="post" class="h-14 justify-center flex flex-wrap w-1/2">
         <input type="text" placeholder="Search..." class="text-white font-maven font-bold h-14 w-3/4 rounded-2xl text-center bg-black-50" id="search">
-        <button type="submit" value="search"><i class="fa-solid fa-magnifying-glass px-5"></i></button>
+        <button type="submit" value="search"><i class="fa-solid fa-magnifying-glass px-5 hover:text-yellow-400"></i></button>
     </form>
 
     <!-- Clickable Icons -->
