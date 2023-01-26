@@ -34,8 +34,6 @@ Route::get('/register', function () {
 
 
 
-
-
-
-
 Route::get('/registering', [userController::class, 'register']);
+Route::get('/loggingin', [userController::class, 'login']);
+Route::post('/logout', [userController::class, 'logout']);
