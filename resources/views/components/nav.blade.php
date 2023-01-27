@@ -4,8 +4,9 @@
     <a href="/" class="font-logo text-4xl"><span class="text-yellow-400">GAME</span>critic</a>
 
     <!-- Search bar -->
-    <form action="/search" method="post" class="h-14 justify-center flex flex-row w-1/2 ">
-        <input type="text" placeholder="Search..." class="text-white font-maven font-bold h-14 px-96 rounded-2xl text-center bg-black-50 border-0" name="search">
+
+    <form action="/search" method="post" class="h-14 justify-center flex flex-row w-1/2">
+        <input type="text" placeholder="Search..." class="text-white font-maven font-bold h-14 w-4/5 rounded-2xl text-center bg-black-50 border-0" name="search">
         <button type="submit" value="search"><i class="fa-solid fa-magnifying-glass px-5 hover:text-yellow-400 transition-all text-2xl "></i></button>
     </form>
 

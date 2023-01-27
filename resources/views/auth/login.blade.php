@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="flex flex-col items-center justify-center h-3/4">
+    <div class="flex flex-col items-center justify-center h-3/4 pt-20">
       <div class="bg-slate-900 w-96 rounded-3xl shadow-md border-slate-900 border-2">
         <div class="bg-black-25 text-center rounded-t-3xl h-1/4 shadow-xl pb-10">
             <h1 class="font-maven font-bold text-5xl pt-8">LOGIN</h1>
