@@ -5,7 +5,7 @@
             <h1 class="font-maven font-bold text-5xl pt-8">LOGIN</h1>
         </div>
         <div>
-            <form class="text-center py-12" method="GET" action="loggingin">
+            <form class="text-center py-12" method="POST" action="loggingin">
                 <div>
                     <input type="email" placeholder="Email" class="text-white font-bold rounded-md bg-black-50 py-3 px-5 placeholder:pl-3 border-0 focus:ring-yellow-400" name="email">
                 </div>

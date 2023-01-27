@@ -5,7 +5,7 @@
             <h1 class="font-maven font-bold text-5xl pt-8">REGISTER</h1>
         </div>
         <div>
-            <form class="text-center py-12" action="/registering" method="GET" autocomplete="off" >
+            <form class="text-center py-12" action="/registering" method="POST" autocomplete="off" >
                 <div>
                     <input type="text" placeholder="Username" class="text-white font-bold rounded-md placeholder:pl-3 bg-black-50 py-3 px-5 border-0 focus:ring-yellow-400" name="username">
                 </div>
