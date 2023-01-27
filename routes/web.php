@@ -34,6 +34,6 @@ Route::get('/register', function () {
 
 
 
-Route::post('/registering', [userController::class, 'register']);
-Route::post('/loggingin', [userController::class, 'login']);
-Route::post('/logout', [userController::class, 'logout']);
+Route::post('/register', [userController::class, 'register']);
+Route::post('/login', [userController::class, 'login']);
+Route::get('/logout', [userController::class, 'logout']);
