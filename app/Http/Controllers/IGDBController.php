@@ -18,7 +18,7 @@ class IGDBController extends Controller
             'headers' => [
                 'Accept' => 'application/json',
                 'Client-ID' => '7xcr34x70bianj4wea8j4pnqzzb8e4',
-                'Authorization' => 'Bearer ysbyzl7wn844ukov8jvpb09y4q6d91'
+                'Authorization' => 'Bearer '.env("APIKEY")
             ],
             'query' => [
                 'order' => 'popularity:desc',
