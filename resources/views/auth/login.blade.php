@@ -3,16 +3,9 @@
       <div class="bg-slate-900 w-96 rounded-3xl shadow-md border-slate-900 border-2">
         <div class="bg-black-25 text-center rounded-t-3xl h-1/4 shadow-xl pb-10">
             @if ($errors->any())
-                    <div class="alert alert-danger text-red-500 pt-5">
-                        <h1>whoops! there seems to have been an error</h1>
-                        <ul class="py-5 text-sm">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
+                <h1 class="text-red-500 pt-5">The provided credentials do not match our records.</h1>
             @else
-             <h1 class="font-maven font-bold text-5xl pt-8">LOGIN</h1>
+                <h1 class="font-maven font-bold text-5xl pt-8">LOGIN</h1>
             @endif
         </div>
         <div>

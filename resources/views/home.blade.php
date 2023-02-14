@@ -6,4 +6,9 @@
     @else
         <h1>not logged in >:c</h1>
     @endif
+
+
+    @foreach ($games as $game)
+        <h1>{{$game->name}}</h1>
+    @endforeach
 </x-app-layout>

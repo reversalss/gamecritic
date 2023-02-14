@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IGDBController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
 
-
+Route::get('/', [IGDBController::class, 'gettopgames']);
 
 Route::get('/login', function () {
     return view('auth.login');
@@ -37,3 +35,7 @@ Route::get('/register', function () {
 Route::post('/register', [userController::class, 'register']);
 Route::post('/login', [userController::class, 'login']);
 Route::get('/logout', [userController::class, 'logout']);
+
+
+
+Route::get('/gettopgames,', [IGDBController::class, 'getTopGames']);

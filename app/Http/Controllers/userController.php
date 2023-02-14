@@ -47,6 +47,9 @@ class userController extends Controller
             $request->session()->regenerate();
             return redirect('/');
         }
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ])->onlyInput('email');
 
     }
 
