@@ -17,19 +17,19 @@ class IGDBController extends Controller
         $response = $client->get('https://api.igdb.com/v4/games/', [
             'headers' => [
                 'Accept' => 'application/json',
-                'Client-ID' => '7xcr34x70bianj4wea8j4pnqzzb8e4',
+                'Client-ID' => env("CLIENTID"),
                 'Authorization' => 'Bearer '.env("APIKEY")
             ],
             'query' => [
-                'order' => 'popularity:desc',
+                'order' => 'rating:desc',
                 'limit' => 20,
-                'fields' => 'name,rating,genres.name,platforms.abbreviation,cover'
+                'fields' => 'id,name,rating,genres.name,platforms.abbreviation,cover'
             ]
         ]);
 
         $games = json_decode($response->getBody());
+    
 
-        
 
         return view('home', ['games' => $games]);
 
