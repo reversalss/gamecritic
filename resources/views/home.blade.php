@@ -1,14 +1,22 @@
 <x-app-layout>
-    <h1>Welcome to your #1 source of gaming news</h1>
+   
+    <div class="grid grid-flow-row grid-cols-3 pt-16 justify-items-center">
+        @foreach ($games as $game)
+            @foreach ($covers as $cover)           
+                <x-featgame
+                :name="$game->name"
+                :rating="$game->rating ?? 0"
+                :cover="$cover->url"
+                />
+            @endforeach
+        @endforeach
+    </div>
 
-    @if (Auth::check())
-        <h1>Logged in WOWWWW</h1>
-    @else
-        <h1>not logged in >:c</h1>
-    @endif
+    <img src="https://api.igdb.com/v4/covers/">
 
 
-    @foreach ($games as $game)
-        <h1>{{$game->name}}</h1>
-    @endforeach
+
+
+
+
 </x-app-layout>

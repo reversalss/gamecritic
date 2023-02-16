@@ -9,20 +9,20 @@ class featgame extends Component
     public $name;
     public $rating;
     public $genre;
-    public $backdrop;
     public $platforms;
+    public $cover;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $rating, $genre, $backdrop, $platforms)
+    public function __construct($name, $rating, $genre, $platforms, $cover)
     {
         $this->name = $name;
         $this->rating = $rating;
         $this->genre = $genre;
-        $this->backdrop = $backdrop;
         $this->platforms = $platforms;
+        $this->cover = $cover;
     }
 
     /**
