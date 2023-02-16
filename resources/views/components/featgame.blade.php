@@ -1,5 +1,11 @@
-<div class="pb-16">
-    <div class="h-96 w-96 bg-slate-700 rounded-xl text-center">
-        <img src="{{str_replace('t_thumb', 't_cover_big_2x', $cover)}}">
+<div class="pb-16 justify-content-center flex flex-col">
+    <img src="{{str_replace('t_thumb', 't_cover_big_2x', $cover)}}" class="">
+    <div class="bg-black-50 pt-2 px-5 pb-4 font-bold h-1/2">
+        <div>
+            <h1 class="text-2xl"><span>{{$name}}</span><span class="float-right text-yellow-400">{{round($rating)}}%</span></h1>
+        </div>
+        <div>
+            <h1 class="opacity-40">{{$genre}}</h1>
+        </div>
     </div>
 </div>

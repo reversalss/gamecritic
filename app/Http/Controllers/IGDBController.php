@@ -22,7 +22,7 @@ class IGDBController extends Controller
             ],
             'query' => [
                 'order' => 'hypes:desc',
-                'limit' => 20,
+                'limit' => 21,
                 'fields' => 'id,name,rating,genres.name,platforms.abbreviation, cover; where first_release_date > 1664575200 & rating > 10'
             ]
         ]);
@@ -53,7 +53,6 @@ class IGDBController extends Controller
 
 
         $covers = json_decode($cover_response->getBody());    
-  
 
 
         return view('home', ['games' => $games, 'covers' => $covers]);
