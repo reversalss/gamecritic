@@ -5,8 +5,8 @@
             <h1 class="text-xl text-overflow-ellipsis overflow-hidden break-words">{{$name}}</h1>
         </div>
         <br>
-        <div>
-            <h1><span class="opacity-40 text-sm">{{$genre}}</span><span class="float-right text-yellow-400 opacity-100 box-border">{{round($rating)}}%</span></h1>
+        <div class="">
+            <h1 class=""><span class="opacity-40 text-sm">{{$genre}}</span><span class="float-right text-yellow-400 opacity-100 box-border">{{round($rating)}}%</span></h1>
         </div>
     </div>
 </div>
