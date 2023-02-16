@@ -17,7 +17,7 @@
             :name="$game->name"
             :rating="$game->rating ?? 0"
             :genre="$game->genres[0]->name ?? 'N/A'"
-            :platform="$game->platforms[0]->abbreviation"
+            :platform="$game->platforms[0]->abbreviation ?? 'N/A'"
             :cover="$cover"
             />
 
