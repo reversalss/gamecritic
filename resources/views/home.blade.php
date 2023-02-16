@@ -1,6 +1,8 @@
 <x-app-layout>
-   
+
+
     <div class="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-flow-row gap-5 pt-16 px-5 justify-items-center">
+
         @foreach ($games as $game)
 
             @php
@@ -22,9 +24,7 @@
             />
 
         @endforeach
-    </div>
-
-
+    </h1>
 
 
 

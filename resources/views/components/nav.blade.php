@@ -1,4 +1,4 @@
-<header class="header sticky top-0 bg-slate-800 shadow-2xl flex items-center justify-between px-8 py-5" id="navbar">
+<header class="header sticky top-0 bg-slate-800 shadow-2xl flex items-center justify-between px-8 py-5 z-50" id="navbar">
 
     <!-- Logo -->
     <a href="/" class="font-logo text-4xl"><span class="text-yellow-400">GAME</span>critic</a>
