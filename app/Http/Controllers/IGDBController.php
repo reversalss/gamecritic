@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class IGDBController extends Controller
 {
@@ -22,40 +23,45 @@ class IGDBController extends Controller
             ],
             'query' => [
                 'order' => 'hypes:desc',
-                'limit' => 21,
-                'fields' => 'id,name,rating,genres.name,platforms.abbreviation, cover; where first_release_date > 1664575200 & rating > 10'
+                'limit' => 50,
+                'fields' => 'id,name,total_rating,genres.name,cover.url; where first_release_date > '.strtotime("-5 months").' & total_rating > 10 & hypes > 1'
             ]
         ]);
 
         $games = json_decode($response->getBody());
-        
+    
 
-        
-        $cover_ids = [];
-        foreach ($games as $game)
-        {
-            $cover_ids[$game->id] = $game->cover;
-        }
+        return view('home', ['games' => $games]);
+
+    }
 
 
 
-        $cover_response = $client->get('https://api.igdb.com/v4/covers', [
+    public function getgame($id)
+    {
+        $client = new Client();
+
+        $response = $client->get('https://api.igdb.com/v4/games/', [
             'headers' => [
                 'Accept' => 'application/json',
                 'Client-ID' => env("CLIENTID"),
                 'Authorization' => 'Bearer '.env("APIKEY")
             ],
             'query' => [
-                'limit' => count($cover_ids),
-                'fields' => 'url, game; where id=('.implode(',',$cover_ids).')'
+                'order' => 'hypes:desc',
+                'limit' => 1,
+                'fields' => 'id,name,total_rating,genres.name,platforms.abbreviation,cover.url,first_release_date,franchise,game_engines.name,screenshots.url; where id = '.$id
             ]
         ]);
 
+        $game = json_decode($response->getBody());
 
-        $covers = json_decode($cover_response->getBody());    
-
-
-        return view('home', ['games' => $games, 'covers' => $covers]);
-
+        return($game);
+        return view('game', ['game' => $game[0]]);
     }
+
+
+
+
+
 }

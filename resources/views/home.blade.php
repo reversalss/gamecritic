@@ -1,26 +1,17 @@
 <x-app-layout>
 
 
-    <div class="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-flow-row gap-5 pt-16 px-5 justify-items-center">
+    <div class="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-flow-row gap-5 pt-16 px-5 justify-items-center">
 
         @foreach ($games as $game)
 
-            @php
-                $cover = null;
-                foreach ($covers as $c) {
-                    if ($c->game == $game->id) {
-                        $cover = $c->url;
-                        break;
-                    }
-                }
-            @endphp
-
             <x-featgame
-            :name="$game->name"
-            :rating="$game->rating ?? 0"
+            :id="$game->id ?? 0"
+            :name="$game->name ?? 'N/A'"
+            :rating="$game->total_rating ?? 0"
             :genre="$game->genres[0]->name ?? 'N/A'"
             :platform="$game->platforms[0]->abbreviation ?? 'N/A'"
-            :cover="$cover"
+            :cover="$game->cover->url"
             />
 
         @endforeach

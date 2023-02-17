@@ -29,13 +29,15 @@ Route::get('/register', function () {
 
 
 
+Route::get('/games/{id}', [IGDBController::class, 'getgame'])->name('game');
 
 
 
+
+
+# AUTHENTICATION
 Route::post('/register', [userController::class, 'register']);
 Route::post('/login', [userController::class, 'login']);
 Route::get('/logout', [userController::class, 'logout']);
 
 
-
-Route::get('/gettopgames,', [IGDBController::class, 'getTopGames']);
