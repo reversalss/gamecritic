@@ -1,7 +1,7 @@
 <x-app-layout>
 
 
-    <div class="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-flow-row gap-5 pt-16 px-5 justify-items-center">
+    <div class="grid min-[2000px]:grid-cols-7 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-flow-row gap-5 pt-16 px-5 justify-items-center">
 
         @foreach ($games as $game)
 

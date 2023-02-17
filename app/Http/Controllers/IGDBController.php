@@ -50,13 +50,12 @@ class IGDBController extends Controller
             'query' => [
                 'order' => 'hypes:desc',
                 'limit' => 1,
-                'fields' => 'id,name,total_rating,genres.name,platforms.abbreviation,cover.url,first_release_date,franchise,game_engines.name,screenshots.url; where id = '.$id
+                'fields' => 'id,name,total_rating,genres.name,platforms.abbreviation,cover.url,first_release_date,franchise,game_engines.name,screenshots.url,summary; where id = '.$id
             ]
         ]);
 
         $game = json_decode($response->getBody());
 
-        return($game);
         return view('game', ['game' => $game[0]]);
     }
 
