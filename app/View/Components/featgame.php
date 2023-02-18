@@ -6,6 +6,7 @@ use Illuminate\View\Component;
 
 class featgame extends Component
 {
+    public $id;
     public $name;
     public $rating;
     public $genre;
@@ -15,8 +16,9 @@ class featgame extends Component
      *
      * @return void
      */
-    public function __construct($name = "N/A", $rating = "N/A", $genre = 0, $cover = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png")
+    public function __construct($id = 0, $name = "N/A", $rating = "N/A", $genre = 0, $cover = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png")
     {
+        $this->id = $id;
         $this->name = $name;
         $this->rating = $rating;
         $this->genre = $genre;

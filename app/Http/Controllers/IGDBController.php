@@ -30,7 +30,6 @@ class IGDBController extends Controller
 
         $games = json_decode($response->getBody());
     
-
         return view('home', ['games' => $games]);
 
     }

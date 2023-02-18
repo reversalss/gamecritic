@@ -6,7 +6,7 @@
         @foreach ($games as $game)
 
             <x-featgame
-            :id="$game->id ?? 0"
+            :id="$game->id"
             :name="$game->name ?? 'N/A'"
             :rating="$game->total_rating ?? 0"
             :genre="$game->genres[0]->name ?? 'N/A'"
