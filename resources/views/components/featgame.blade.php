@@ -1,5 +1,9 @@
 <div class="pb-3 justify-content-center flex flex-col min-w-0">
+    @if (isset($cover))
     <a href="/games/{{$id}}"><img src="{{str_replace('t_thumb', 't_cover_big_2x', $cover)}}" class=""></a>
+    @else
+    <a href="/games/{{$id}}"><img src="'/images/missingcover.png" class=""></a>
+    @endif
     <div class="bg-black-50 pt-2 px-5 pb-4 font-bold h-1/2 min-w-0">
         <div class="box-border min-w-0">
             <h1 class="text-xl whitespace-nowrap text-ellipsis overflow-hidden min-w-0 w-52"><a href="/games/{{$id}}">{{$name}}</a></h1>
