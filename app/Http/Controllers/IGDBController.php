@@ -54,8 +54,34 @@ class IGDBController extends Controller
         ]);
 
         $game = json_decode($response->getBody());
-
+        
         return view('game', ['game' => $game[0]]);
+    }
+
+
+
+    public function search(Request $request)
+    {
+        $client = new Client();
+
+
+        $query = $request->get('query');
+        $response = $client->get('https://api.igdb.com/v4/search', [
+            'headers' => [
+                'Accept' => 'application/json',
+                'Client-ID' => env("CLIENTID"),
+                'Authorization' => 'Bearer '.env("APIKEY")
+            ],
+            'query' => [
+                'limit' => 100,
+                'fields' => 'game.id,game.name,game.total_rating,game.genres.name,game.cover.url,game.version_parent, game.parent_game; search "'.$query.'"; where game.total_rating > 1'
+            ]
+        ]);
+
+        $games = json_decode($response->getBody());
+        
+        return view('search', ['games' => $games]);
+
     }
 
 

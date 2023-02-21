@@ -29,6 +29,7 @@ Route::get('/register', function () {
 
 
 
+Route::get('/search', [IGDBController::class, 'search']);
 Route::get('/games/{id}', [IGDBController::class, 'getgame'])->name('game');
 
 

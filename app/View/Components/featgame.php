@@ -16,7 +16,7 @@ class featgame extends Component
      *
      * @return void
      */
-    public function __construct($id = 0, $name = "N/A", $rating = "N/A", $genre = 0, $cover = "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png")
+    public function __construct($id = 0, $name = "N/A", $rating = "N/A", $genre = 0, $cover = "https://www.streamscheme.com/wp-content/uploads/2022/02/sadge-200.png")
     {
         $this->id = $id;
         $this->name = $name;
