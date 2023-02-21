@@ -2,8 +2,9 @@
 
 <div class="border-yellow-400 border-b-2 w-full h-1/2 relative">
     <div class="w-full h-full overflow-hidden">
-        <img src="{{str_replace('t_thumb', 't_screenshot_big_2x', $game->screenshots[0]->url)}}" class="w-full h-full object-cover blur-xl" draggable="false">
-    </div>
+        @if (isset($game->screenshots))            
+           <img src="{{str_replace('t_thumb', 't_screenshot_big_2x', $game->screenshots[0]->url)}}" class="w-full h-full object-cover blur-xl" draggable="false">
+        @endif    </div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 h-full">
         @if (isset($game->cover->url))
         <img src="{{str_replace('t_thumb', 't_cover_big_2x', $game->cover->url)}}" class="h-full border-2 border-b-0 border-yellow-400 mx-auto">
